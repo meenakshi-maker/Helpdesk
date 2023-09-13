@@ -52,7 +52,7 @@ while True:
         print("\nTicket created successfully.")
 
     elif choice == 2:
-        ticket_number = int(input("Enter ticket number to resolve: "))
+        ticket_number = Ticket.ticket_count
         found = False
 
         for ticket in tickets:
@@ -67,7 +67,7 @@ while True:
 
     elif choice == 3:
         print(f"\nPrinting tickets: \n"
-             f"Ticket number:  {2000 + Ticket.ticket_count}\n"
+             f"Ticket number:  { Ticket.ticket_count}\n"
              f"Tickets Created: {Ticket.tickets_to_solve}\n"
              f"Tickets Resolved: {Ticket.tickets_resolved}\n"
              f"Tickets To Solve: {Ticket.tickets_to_solve}\n")

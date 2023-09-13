@@ -1,5 +1,5 @@
 class Ticket:
-    ticket_count = 0
+    ticket_count = 2000
     tickets_resolved = 0
     tickets_to_solve = 0
 
@@ -12,12 +12,12 @@ class Ticket:
         self.email_address = email_address
         self.description = description
         self.response = ""
-        self.status = "Open"
+        self.status = True
         Ticket.tickets_to_solve += 1
 
     def resolve_ticket(self, response):
         self.response = response
-        self.status = "Resolved"
+        self.status = True
         Ticket.tickets_resolved += 1
         Ticket.tickets_to_solve -= 1
 
