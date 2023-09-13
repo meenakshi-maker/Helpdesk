@@ -3,7 +3,7 @@ class Ticket:
     tickets_resolved = 0
     tickets_to_solve = 0
 
-    def __init__(self, ticket_creator, staff_id, email_address, description):
+    def __init__(self, ticket_creator, staff_id, email_address, description,):
         Ticket.ticket_count += 1
  #----------- Assign ticket attributes--------------
         self.ticket_number = Ticket.ticket_count
@@ -11,7 +11,6 @@ class Ticket:
         self.staff_id = staff_id
         self.email_address = email_address
         self.description = description
-        self.response = ""
         self.status = True
         Ticket.tickets_to_solve += 1
 
