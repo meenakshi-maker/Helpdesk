@@ -43,7 +43,7 @@ def menuLoad(menu):
 tickets = []
 
 while True:
-    menu = ["Create Ticket", "Resolve Ticket", "Display Ticket Statistics"]
+    menu = ["Create Ticket", "Resolve Ticket", "Display Ticket Statistics","Printing tickets"]
     choice = menuLoad(menu)
 
     if choice == 1:
@@ -66,10 +66,23 @@ while True:
             print("\nTicket number not found.")
 
     elif choice == 3:
-        print("\nTicket number:", 2000+ Ticket.ticket_count)
-        print("Tickets Created:", Ticket.ticket_count)
-        print("Tickets Resolved:", Ticket.tickets_resolved)
-        print("Tickets To Solve:", Ticket.tickets_to_solve)
+        print(f"\nPrinting tickets: \n"
+             f"Ticket number:  {2000 + Ticket.ticket_count}\n"
+             f"Tickets Created: {Ticket.tickets_to_solve}\n"
+             f"Tickets Resolved: {Ticket.tickets_resolved}\n"
+             f"Tickets To Solve: {Ticket.tickets_to_solve}\n")
+
+    elif choice == 4:
+        tickets.append(ticket)
+        for ticket in tickets:
+         print(f"Ticket Creator: {ticket.ticket_creator}\n"
+               f"Staff ID: {ticket.staff_id}\n"
+               f"Email Address: {ticket.email_address}\n"
+               f"Description: {ticket.description}\n"
+               f"Response: {ticket.response}\n"
+               f"Ticket Status: {ticket.status}\n")
+
+
 
     elif choice == 0:
         break
