@@ -23,7 +23,7 @@ def menuLoad(menu):
 
     print(f"0. EXIT")
 
-    choice = input("Enter Number: ")
+    choice = input("Enter Choice Number: ")
 
     if choice.isnumeric():
         choice = int(choice)
@@ -67,13 +67,13 @@ while True:
 
     elif choice == 3:
         print(f"\nPrinting tickets: \n"
-             f"Ticket number:  { Ticket.ticket_count}\n"
+            # f"Ticket number:  { Ticket.ticket_count}\n"
              f"Tickets Created: {Ticket.tickets_to_solve}\n"
              f"Tickets Resolved: {Ticket.tickets_resolved}\n"
              f"Tickets To Solve: {Ticket.tickets_to_solve}\n")
 
     elif choice == 4:
-        tickets.append(ticket)
+       # tickets.append(ticket)
         for ticket in tickets:
          print(f"Ticket Creator: {ticket.ticket_creator}\n"
                f"Staff ID: {ticket.staff_id}\n"
