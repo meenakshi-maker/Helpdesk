@@ -75,7 +75,8 @@ while True:
     elif choice == 4:
        # tickets.append(ticket)
         for ticket in tickets:
-         print(f"Ticket number:  { Ticket.ticket_count}\n"
+         print(f"Printing Tickets: \n"
+               f"Ticket number:  { Ticket.ticket_count}\n"
                f"Ticket Creator: {ticket.ticket_creator}\n"
                f"Staff ID: {ticket.staff_id}\n"
                f"Email Address: {ticket.email_address}\n"
