@@ -66,7 +66,7 @@ while True:
             print("\nTicket number not found.")
 
     elif choice == 3:
-        print(f"\nPrinting tickets: \n"
+        print(f"\nDisplay Ticket Statistics \n"
             # f"Ticket number:  { Ticket.ticket_count}\n"
              f"Tickets Created: {Ticket.tickets_to_solve}\n"
              f"Tickets Resolved: {Ticket.tickets_resolved}\n"
