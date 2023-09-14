@@ -86,9 +86,9 @@ while True:
 
 
 
-   # elif choice == 0:
+    elif choice == 0:
 
-       # break
+        break
 #---------------->>>>>>EXIT<<<<<<<<<<<-----------------
     else:
         print(" Invalid choice\n")
