@@ -15,6 +15,15 @@ class Ticket:
         self.status = True
         Ticket.tickets_to_solve += 1
 
+    def generate_password(self):
+        new_password = " "
+        # first two characters of staff_id
+        new_password = self.staff_id[0:2]
+
+        # + first 3 characters of staff_name
+        new_password += self.ticket_creator[0:3]
+        return new_password
+
     def resolve_ticket(self, response):
         self.response = response
         self.status = True

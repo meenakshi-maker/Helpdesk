@@ -13,6 +13,14 @@ def resolve_ticket(ticket):
     response = input("Enter response: ")
     ticket.resolve_ticket(response)
 
+def generate_password(ticket):
+    curr_password = input("Enter current password: ")
+    if curr_password == ticket.ticket_number:
+        new_password = input("Enter new password: ")
+        ticket.generate_password(new_password)
+    else:
+        print("wrong password. Failed to generate password.")
+
 #------------------ >>>>>>>>>>>>>Menu maker<<<<<<<<<<<<----------------------------------------
 def menuLoad(menu):
     count = 1
@@ -43,7 +51,7 @@ def menuLoad(menu):
 tickets = []
 
 while True:
-    menu = ["Create Ticket", "Resolve Ticket", "Display Ticket Statistics","Printing tickets"]
+    menu = ["Create Ticket", "Resolve Ticket", "Display Ticket Statistics","Printing tickets","Generate Password"]
     choice = menuLoad(menu)
 
     if choice == 1:
@@ -83,8 +91,16 @@ while True:
                f"Description: {ticket.description}\n"
                f"Response: {ticket.response}\n"
                f"Ticket Status: {ticket.status}\n")
-
-
+    elif choice == 5:
+        ticket_number = int(input("Enter the ticket number to generate password: "))
+        found = False
+        for ticket in tickets:
+            if ticket.ticket_number == ticket_number:
+                generate_password(ticket)
+                found = True
+                break
+        if not found:
+            print("Ticket number not found.")
 
     elif choice == 0:
 
